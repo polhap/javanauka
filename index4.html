@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lekcja</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+		console.log ("wczytywanie");
+		$(document).ready(function() {
+			console.log ("wczytane");
+			$("#lista").children(".special").each(function(){
+				$(this).click(function() {
+					$(this).fadeOut("slow")
+				});
+			});
+		});
+		console.log("nadalwczytuje");
+
+function kasacja () {
+	$("#lista,.deleteme").fadeOut();
+	
+}
+	</script>
+</head>
+<body>
+
+	<ul id="lista">
+		<li>pranie</li>
+		<li class="special">gotowanie</li>
+		<li class="special">sprzatanie</li>
+	</ul>
+	<div class="deleteme" onClick="kasacja()" >Usuna wszystko</div>
+</body>
+</html>
